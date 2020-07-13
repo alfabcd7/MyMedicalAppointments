@@ -3,7 +3,8 @@ import static ui.UiMenu.*;
 
 public class Main {
     public static void main(String[] args) {
-      Doctor myDoctor = new Doctor();
+      Doctor myDoctor ;
+      myDoctor = new Doctor();
       myDoctor.name = "Carlos Alfredo Soria Escalante";
       myDoctor.speciality = "Cirujano CardioVascular";
       myDoctor.showName();
