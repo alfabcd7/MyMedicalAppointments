@@ -3,6 +3,8 @@ import static ui.UiMenu.*;
 
 public class Main {
     public static void main(String[] args) {
+       Patient patient = new Patient("Alfredo Soria Añez" , "carlos.alfredo.soria@gmail.com" , "77047779");
+
      /*
       Doctor myDoctor ;
       myDoctor = new Doctor();
