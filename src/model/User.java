@@ -1,7 +1,9 @@
-public class User {
-    //Atributos de SuperClase User.
+package model;
+
+public abstract class User {
+    //Atributos de SuperClase model.User.
     private static int id; // autoincrement // el primer valor de id sera 0
-    // si la variable id no fuera estatica , cada vez que se inicilize Doctor el id se reiniciaria en cero
+    // si la variable id no fuera estatica , cada vez que se inicilize model.Doctor el id se reiniciaria en cero
     //Al ser estatica el valor de la variable prevalece mas alla de la instaciacion del objeto.
     private String name;
     private String email;
@@ -9,32 +11,30 @@ public class User {
     private String phoneNumber;
     private String birthday;
 
+    //constructor.
     public User(String name, String email, String phoneNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-
+    //Getters
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getEmail() {
         return email;
     }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
+    //Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
     public void setPhoneNumber(String phoneNumber) {
         if (phoneNumber.length() != 8) {
             System.out.println("El numero telefonico debe ser de 8 digitos");
@@ -44,9 +44,14 @@ public class User {
         }
 
     }
-
+    //polimorfismo
+    /*
+    Sobreescribiendo el metodo toString() proveniene de la clase object.
+     */
     @Override // con la anotacion @override yo se que es un metodo que no es propio de la clase user sino es un metodo extraido de la superclase object
     public String toString() {
-        return "User: " + name + ", Email: " + email + "\nAddress: " + address + ". Phone: " + phoneNumber;
+        return "model.User: " + this.name + ", Email: " + this.email + "\nAddress: " + this.address + ". Phone: " + this.phoneNumber;
     }
+    //abstract
+    public abstract void showDataUser();
 }
