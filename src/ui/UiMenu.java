@@ -73,6 +73,7 @@ public class UiMenu {
                            //obtener el usuario logeado
                            doctorLogged = d;
                            //showdoctorMenu
+                           UiDoctorMenu.showDoctorMenu();
                        }
                    }
            }

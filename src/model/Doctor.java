@@ -1,9 +1,13 @@
 package model;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor extends User {
     private String speciality ;
+    //array de fechas disponibles.
+    private ArrayList <availableAppointment>  availableAppointments = new ArrayList<>(); //aqui indico que tendre una coleccion de objetos de tipo availableAppointments(los q cree la subclase)
 
 
 
@@ -11,7 +15,7 @@ public class Doctor extends User {
    public Doctor(String name , String email , String phoneNumber){
         super(name,email,phoneNumber);  // se declara el m2etodo constructor de la clase model.Doctor
 
-        System.out.println("Construyendo el Objeto model.Doctor : "); // rutina que realizara cada que se cree el objeto
+        // System.out.println("Construyendo el Objeto model.Doctor : "); // rutina que realizara cada que se cree el objeto
        //id++; // al instanciar el objeto el id sera incrementado.
 
     }
@@ -26,8 +30,8 @@ public class Doctor extends User {
         this.speciality = speciality;
     }
 
-    ArrayList <availableAppointment>  availableAppointments = new ArrayList<>(); //aqui indico que tendre una coleccion de objetos de tipo availableAppointments(los q cree la subclase)
-    public void addAvailableAppointment(Date date, String time){ //metodo q añade nuevas citas
+
+    public void addAvailableAppointment(String date, String time){ //metodo q añade nuevas citas
         availableAppointments.add(new availableAppointment(date,time)); //añade al array dinamico un nuevo objeto creado de la subclase availableAppointment cuyo constructor recibe las variables del metodo.
 
     }
@@ -54,9 +58,15 @@ public class Doctor extends User {
         private int id;
         private Date date;
         private String time;
+        SimpleDateFormat format = new SimpleDateFormat("dd/mm/yyyy");
 
-        public availableAppointment(Date date, String time) {
-            this.date = date;
+        public availableAppointment(String date, String time) {
+            try {
+                this.date = format.parse(date);
+            }catch (ParseException e){
+                e.printStackTrace();
+            }
+
             this.time = time;
         }
 
@@ -70,6 +80,10 @@ public class Doctor extends User {
 
         public Date getDate() {
             return date;
+        }
+
+        public String getDate(String DATE) {
+            return format.format(date);
         }
 
         public void setDate(Date date) {
