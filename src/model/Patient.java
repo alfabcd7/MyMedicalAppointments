@@ -1,3 +1,5 @@
+package model;
+
 import javax.swing.*;
 
 public class Patient extends User {
@@ -5,9 +7,16 @@ public class Patient extends User {
     private double weight;
     private double height;
 
-    Patient(String name, String email , String phoneNumber) {
+    public  Patient(String name, String email , String phoneNumber) {
         super(name ,email,phoneNumber);
 
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println(":" + "");
+        System.out.println(""+ "");
+        System.out.println(""+"");
     }
 
     public void setWeight(double weight) {
