@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf47ba-08b2-482b-b1b8-c271c04ee8b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/UiPatientMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMedicalAppointments/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMedicalAppointments/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/UiDoctorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UiDoctorMenu.java" afterDir="false" />
@@ -35,10 +33,10 @@
   <component name="ProjectId" id="1cKpnMWm3FzJ4heNGjBNQSnqWpS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../netflixScript" />
@@ -58,6 +56,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -77,31 +76,52 @@
     </state>
     <state x="2832" y="359" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599362860115" />
     <state x="912" y="328" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1595398868895" />
-    <state x="2606" y="213" key="FileChooserDialogImpl" timestamp="1600443473169">
-      <screen x="1920" y="-9" width="1920" height="1080" />
+    <state x="686" y="222" key="FileChooserDialogImpl" timestamp="1600857558422">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2606" y="245" key="FileChooserDialogImpl/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599173284292" />
     <state x="2606" y="213" key="FileChooserDialogImpl/0.0.1920.1080/1920.-9.1920.1080@1920.-9.1920.1080" timestamp="1600443473169" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1599875555305">
-      <screen x="1920" y="31" width="1920" height="1040" />
+    <state x="686" y="222" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600857558422" />
+    <state width="1877" height="366" key="GridCell.Tab.0.bottom" timestamp="1600966231673">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1599875555305">
-      <screen x="1920" y="31" width="1920" height="1040" />
+    <state width="1877" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231673" />
+    <state width="1877" height="366" key="GridCell.Tab.0.center" timestamp="1600966231671">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1599875555305">
-      <screen x="1920" y="31" width="1920" height="1040" />
+    <state width="1877" height="366" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231671" />
+    <state width="1877" height="366" key="GridCell.Tab.0.left" timestamp="1600966231671">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1599875555305">
-      <screen x="1920" y="31" width="1920" height="1040" />
+    <state width="1877" height="366" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231671" />
+    <state width="1877" height="366" key="GridCell.Tab.0.right" timestamp="1600966231671">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
+    <state width="1877" height="366" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231671" />
+    <state width="1877" height="366" key="GridCell.Tab.1.bottom" timestamp="1600966231308">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231308" />
+    <state width="1877" height="366" key="GridCell.Tab.1.center" timestamp="1600966231306">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231306" />
+    <state width="1877" height="366" key="GridCell.Tab.1.left" timestamp="1600966231306">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231306" />
+    <state width="1877" height="366" key="GridCell.Tab.1.right" timestamp="1600966231306">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600966231306" />
     <state x="150" y="246" key="SettingsEditor" timestamp="1595123353058">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -129,5 +149,21 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="602" y="353" width="838" height="160" key="search.everywhere.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1595121056417" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ui/UiDoctorMenu.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="model.Doctor" memberName="availableAppointments" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
