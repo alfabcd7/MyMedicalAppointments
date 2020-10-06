@@ -1,6 +1,5 @@
 package model;
 
-import javax.swing.*;
 
 public class Patient extends User {
     private String blood;

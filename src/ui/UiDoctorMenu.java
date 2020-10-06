@@ -90,6 +90,7 @@ public class UiDoctorMenu {
                     // el nombre del ArrayList es [doctorsAvailableAppointments].
                 }else if (response == 0){ // Si se Elijo Return.
                     showDoctorMenu(); //Vuelve a llamar el menu de Doctores.
+                    System.out.println("y luego?");
                 }
         }while (response != 0);//Mientras la respuesta sea distinta de cero , repite.
  }

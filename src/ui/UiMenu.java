@@ -39,8 +39,10 @@ public class UiMenu {
                     break;
                 case 2:
                     System.out.println("model.Patient");
-                    response = 0;
-                    authUser(2);
+                    Patient p = new Patient("Alfredo Soria","carlos.alfredo.soria@gmail.com","77047779");
+                    patientLogged = p;
+                    showPatientMenu();
+                    //authUser(2);
                     break;
                 case 0: //Sake de la aplicacion
                     System.out.println("Thank you for you visit");
@@ -93,7 +95,7 @@ public class UiMenu {
                        emailCorrect = true;// cambia a true (se cumplio).
                        patientLogged = p; //obtener el usuario logeado. // pasa la referencia de la variable "p" de tipo Patient proveniente del Arraylist hacia otra var. del mismo tipo.
                        //showpatientMenu
-                       showPatientMenu(); //llamada al metodo de la clase UiPatientMenu.
+                       showPatientMenu();//llamada al metodo de la clase UiPatientMenu.
                    }
                }
 
@@ -103,35 +105,4 @@ public class UiMenu {
 
 
     // showPatientMenu Methods
-
-    public static void showPatientMenu(){
-        int response = 0;
-        do {
-            System.out.println("\n\n");
-            System.out.println("model.Patient");
-            System.out.println("1. Book an appointment");
-            System.out.println("2. My appointments");
-            System.out.println("0. Return");
-
-            Scanner sc = new Scanner(System.in);
-            response = Integer.valueOf(sc.nextLine());
-
-            switch (response){
-                case 1:
-                    System.out.println("::Book an appointment");
-                    for (int i = 0; i < 4 ; i++) {
-                        System.out.println(i + "." + MONTHS[i]);
-                    }
-                    break;
-                case 2:
-                    System.out.println("::My appointments");
-                    break;
-                case 0:
-                    showMenu();
-                    break;
-            }
-        }while (response != 0);
-    }
-
-
 }
