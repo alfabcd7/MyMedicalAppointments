@@ -31,6 +31,7 @@ public class UiPatientMenu {
                    showBookAppointMenu();
                    break;
                case 2:
+                   showPatientMyAppointments();
                    break;
                case 0:
                    showMenu();
@@ -70,9 +71,39 @@ private static void showBookAppointMenu(){ // metodo que muestra libros de citas
            }
          Scanner sc = new Scanner(System.in);
            int responseDateSelected = Integer.valueOf(sc.nextLine());
+           Map<Integer,Doctor> doctorAvailableSelected = doctors.get(responseDateSelected);
+           Integer indexDate = 0;
+           Doctor doctorSelected = new Doctor("","","");
+           for (Map.Entry<Integer,Doctor> doc : doctorAvailableSelected.entrySet()){
+               indexDate = doc.getKey();
+               doctorSelected = doc.getValue();
+           }
+           System.out.printf(doctorSelected.getName() +
+                   ". Date: " + doctorSelected.getAvailableAppointments().get(indexDate).getDate()
+                   +". Time: "+ doctorSelected.getAvailableAppointments().get(indexDate).getTime() );
+           System.out.println("confirm you appointment : \n 1.yes \n 2. Change Data");
+           response = Integer.valueOf(sc.nextLine());
+
 
        }while (response != 0);
 
+}
+private static void showPatientMyAppointments(){
+       int response = 0;
+       do {
+           System.out.println("::My Appointments");
+           if (patientLogged.getAppoinmentDoctors().size() == 0){
+               System.out.printf("Don`t have Appointments");
+               break; // se sale del bucle
+           }
+           for (int i = 0; i < patientLogged.getAppoinmentDoctors().size() ; i++) {
+               int j = i + 1;
+               System.out.println(j + ". " + "Date: " + patientLogged.getAppoinmentDoctors().get(i).getDate() +
+                       ". Time : " + patientLogged.getAppoinmentDoctors().get(i).getTime() +
+                       "\n Doctor: " + patientLogged.getAppoinmentDoctors().get(i).getDoctor());
+           }
+           System.out.println("0 . Return");
+       }while (response != 0);
 }
 
 

@@ -39,10 +39,7 @@ public class UiMenu {
                     break;
                 case 2:
                     System.out.println("model.Patient");
-                    Patient p = new Patient("Alfredo Soria","carlos.alfredo.soria@gmail.com","77047779");
-                    patientLogged = p;
-                    showPatientMenu();
-                    //authUser(2);
+                    authUser(2);
                     break;
                 case 0: //Sake de la aplicacion
                     System.out.println("Thank you for you visit");
