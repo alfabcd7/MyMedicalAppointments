@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf47ba-08b2-482b-b1b8-c271c04ee8b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/AppoinmentDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AppoinmentDoctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Patient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/UiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UiMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UiPatientMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UiPatientMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,10 +152,11 @@
       <screen x="1920" y="31" width="1920" height="1040" />
     </state>
     <state x="2622" y="179" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599458369945" />
-    <state x="602" y="353" width="838" height="160" key="search.everywhere.popup" timestamp="1595121056417">
-      <screen x="0" y="0" width="1920" height="1041" />
+    <state x="2522" y="366" width="838" height="166" key="search.everywhere.popup" timestamp="1602110477029">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="602" y="353" width="838" height="160" key="search.everywhere.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1595121056417" />
+    <state x="2522" y="366" width="838" height="166" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602110477029" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
