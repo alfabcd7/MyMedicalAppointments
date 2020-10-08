@@ -81,7 +81,7 @@ public class UiMenu {
            System.out.println("Insert your email: Example --> [a@a.com]"); //
            Scanner sc = new Scanner(System.in);
            String emailStringReceipt = sc.nextLine(); // Recibe los caracteres de entrada por medio de la terminal.
-           if(userType == 1){ // Si es es un tipo Doctor (la recibe desde el metodo showMenu)
+           if(userType == 1){ // Si es es un tipo Doctor (el valor de la recibe desde el metodo showMenu)
                    for (Doctor d: doctors){ //recorre el ArrayList "doctors".
                        if (d.getEmail().equals(emailStringReceipt)){ // si el atributo "email" del objeto Doctor es igual (equals) a el "email" ingresado.
                            emailCorrect = true; // cambia a true (se cumplio).
@@ -91,7 +91,7 @@ public class UiMenu {
                        }
                    }
            }
-           else if (userType == 2){ // Si es es un tipo Patient (la recibe desde el metodo showMenu)
+           else if (userType == 2){ // Si es es un tipo Patient (el valor de la recibe desde el metodo showMenu)
                for (Patient p: patients){  //recorre el ArrayList "patients".
                    if (p.getEmail().equals(emailStringReceipt)){ // si el atributo "email" del objeto Patient es igual (equals) a el "email" ingresado.
                        emailCorrect = true;// cambia a true (se cumplio).

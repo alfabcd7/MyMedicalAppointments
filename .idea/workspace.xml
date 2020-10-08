@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf47ba-08b2-482b-b1b8-c271c04ee8b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/UiDoctorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UiDoctorMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/UiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UiMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,34 +82,34 @@
     <state x="2606" y="213" key="FileChooserDialogImpl/0.0.1920.1080/1920.-9.1920.1080@1920.-9.1920.1080" timestamp="1600443473169" />
     <state x="686" y="222" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600857558422" />
     <state x="2163" y="474" width="440" height="401" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601413418172" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1602098105748">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1602189507741">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1601115826689" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602098105748" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1602098105748">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602189507741" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1602189507741">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1601115826689" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602098105748" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1602098105748">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602189507741" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1602189507741">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1601115826689" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602098105748" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1602098105748">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602189507741" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1602189507741">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599875555305" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1594616448355" />
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1601115826689" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602098105748" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602189507741" />
     <state width="1877" height="145" key="GridCell.Tab.1.bottom" timestamp="1601415453149">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -152,11 +153,11 @@
       <screen x="1920" y="31" width="1920" height="1040" />
     </state>
     <state x="2622" y="179" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.31.1920.1040@1920.31.1920.1040" timestamp="1599458369945" />
-    <state x="2522" y="366" width="838" height="166" key="search.everywhere.popup" timestamp="1602110477029">
+    <state x="2522" y="366" width="838" height="166" key="search.everywhere.popup" timestamp="1602182252353">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="602" y="353" width="838" height="160" key="search.everywhere.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1595121056417" />
-    <state x="2522" y="366" width="838" height="166" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602110477029" />
+    <state x="2522" y="366" width="838" height="166" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602182252352" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
