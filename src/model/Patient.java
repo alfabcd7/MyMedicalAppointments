@@ -1,11 +1,15 @@
 package model;
 
-import javax.swing.*;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Patient extends User {
     private String blood;
     private double weight;
     private double height;
+    private ArrayList<AppoinmentDoctor> appoinmentDoctors = new ArrayList<>();
+    private ArrayList<AppointmentNurse> appointmentNurses = new ArrayList<>();
 
     public  Patient(String name, String email , String phoneNumber) {
         super(name ,email,phoneNumber);
@@ -17,6 +21,26 @@ public class Patient extends User {
         System.out.println(":" + "");
         System.out.println(""+ "");
         System.out.println(""+"");
+    }
+
+    public ArrayList<AppoinmentDoctor> getAppoinmentDoctors() {
+        return appoinmentDoctors;
+    }
+
+    public void addAppoinmentDoctors(Doctor doctor , Date date , String time) {
+        AppoinmentDoctor appoinmentDoctor = new AppoinmentDoctor(this,doctor);
+        appoinmentDoctor.schedule(date,time);
+        appoinmentDoctors.add(appoinmentDoctor);
+
+
+    }
+
+    public ArrayList<AppointmentNurse> getAppointmentNurses() {
+        return appointmentNurses;
+    }
+
+    public void setAppointmentNurses(ArrayList<AppointmentNurse> appointmentNurses) {
+        this.appointmentNurses = appointmentNurses;
     }
 
     public void setWeight(double weight) {
