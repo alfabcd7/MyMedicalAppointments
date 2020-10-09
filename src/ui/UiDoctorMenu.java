@@ -62,7 +62,8 @@ public class UiDoctorMenu {
     }
  private static void showAddAvailableAppointmentsMenu() {
      int response = 0;
-     do {// Incio "Do - while" de showAddAvailableAppointmentsMenu
+     boolean selectionDate = false , Confirmationtime = false , ConfirmationDate = false ;
+     do {// Incio "Do - while" de Selection Month.
          System.out.println();
          System.out.println(":: Welcome to add Available Appoinment option Menu"); // Impresion de titulo.
          System.out.println(":: Please , Select a Month");// impresion de instrucciones
@@ -79,13 +80,14 @@ public class UiDoctorMenu {
          if (response > 0 && response < 13) { // Si response es entre 1 y 12 ...Entra al bucle.
              int monthSelected = response; //Asigno la respuesta en una variable cuyo nombre sea mas entendible.
              System.out.println("::You have chosen the following Option ::" + monthSelected + "." + MONTHS[monthSelected - 1]); // Imprime el mes seleccionado.
-             do { // Inicio de "Do - while" de Selection Month.
+             do { // Inicio de "Do - while" de confirmation Month
                  System.out.println("   1.- I screwed up , I want to Choose another Month.");
                  System.out.println("   2.- Yes , That is it ,So I want to Insert an Available date to receipt Patients");
                  response = Integer.valueOf(sc.nextLine());
-                 switch (response){ // Inicio de "Switch" de Selection Month
+                 switch (response){ // Inicio de "Switch" de confirmation Month
                      case 1 : // Opcion para volver al Menu de Meses.
                          System.out.println("::Selection Month Message : !Ok¡ , No Problem , Lest Go To the month selection menu!!");
+                         selectionDate = true;
                         break;
                      case 2: // Opcion para pasar a la confirmacion de fecha.
                          System.out.println("::Selection Month Message : You have confirmated the Month , so....");
@@ -94,8 +96,8 @@ public class UiDoctorMenu {
                              String dateStringCatch = sc.nextLine(); // captura el String ingresado por terminal.
                              /* el usuario debe definir si los datos ingresados son correctos o incorrectos.*/
                              System.out.println("    You haven chosen the following date : " + dateStringCatch + "\n  1. Correct \n  2. Change Date \n 3. I want to go back to the month selection menu");//imprime un menu para validar la informacion ingresada.
-                             int responseDate = Integer.valueOf(sc.nextLine()); // crea una nueva variable para capturar la respuesta de tipo entero.
-                             switch (responseDate){ // Inicio de "Switch" de Confirmation Date
+                             response = Integer.valueOf(sc.nextLine()); // vuelve a capturar la respuesta en la misma variable response.
+                             switch (response){ // Inicio de "Switch" de Confirmation Date
                                  case 1:
                                      int responseTime = 0;
                                      String timeStringCatch = "";
@@ -122,35 +124,35 @@ public class UiDoctorMenu {
                                                  responseTime = 2;
                                                  break;
                                          } // Fin de "Switch" de Confirmation Time
-                                     }while (responseTime == 2); // fin de "Do - while" de Selection Time
+                                     }while (responseTime == 2); // fin de "Do - while" de confirmation Time
                                  break;
                                  case 2:
                                      System.out.println("    Ok , No Problem , You can change it!!");
                                      response = 0; //
                                      break;
                                  case 3 :
-                                     //3. I want to go back to the month selection menu"
+                                     System.out.println("::Insertion Month Message : !Ok¡ , No Problem , Lest Go To the month selection menu!!");
+                                     response = 2;
                                      break;
                                  default:
                                      break;
                              }// Fin de "Switch" de Confirmation Date
                          }while(response != 2); //fin de "Do-while" de Confirmation Date
+                         if ()
                          continue;
                      default:
-                     System.out.println("\n:: Error , that is not an Correct Option , Try Again\n");
+                     System.out.println("\n::Selection Month Message : Error , that is not an Correct Option , Try Again\n");
                      response = 0;
                      break;
-                 }// Fin de "Switch" de Selection Month
-             }while(response != 1); // Fin de "Do - while" de Selection Month
-             continue; // reinicia el "Do - while" de showAddAvailableAppointmentsMenu
-
+                 }// Fin de "Switch" de confirmation Month
+             }while(response != 1); // Fin de "Do - while" de confirmation Month
          }else if(response == 0) { // Si se Elijo Return.
              System.out.println("::Backing to the Doctor Menu");
          } else {
              System.out.println("\n:: Error , that is not an Correct Option , Try Again\n");
          }
 
-     }while (response != 0); // Fin "Do - while" de showAddAvailableAppointmentsMenu
+     }while (response != 0); // Fin "Do - while" de Selection Month.
      showDoctorMenu(); //Vuelve a llamar el menu de Doctores.
 }
  private static void checkDoctorAvailableApppointments(Doctor doctor){
