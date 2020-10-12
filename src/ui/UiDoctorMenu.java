@@ -61,104 +61,168 @@ public class UiDoctorMenu {
         }while (response != 0) ; // si la respuesta es diferente a cero , repite.
     }
  private static void showAddAvailableAppointmentsMenu() {
+     boolean selectionMonth = false;
      int response = 0;
-     boolean selectionDate = false , Confirmationtime = false , ConfirmationDate = false ;
+     String [] text = new String [10] ;
+     text[0] = "::You have chosen the following Option ::";
+     text[1] = "\n  >1. Correct \n  >2. No , I want to Change \n  >3. I want to go back to the month selection menu";
+     text[2] = "\n::Backing to the Doctor Menu";
+     text[3] = "      >I got you!!,Selection confirmed, So lets move on!!\n";
+     text[4] = "    >Ok , No Problem , You can change it!!";
+     text[5] = ">!Ok¡ , No Problem , Lest Go To the month selection menu!!";
+     text[6] = "\n:: Error , that is not an Correct Option , Try Again" ;
      do {// Incio "Do - while" de Selection Month.
+         boolean   confirmationTime = false , insertionDate = false , insertionTime = false , confirmationDate = false ;
+         selectionMonth = false;
          System.out.println();
-         System.out.println(":: Welcome to add Available Appoinment option Menu"); // Impresion de titulo.
-         System.out.println(":: Please , Select a Month");// impresion de instrucciones
-
+         System.out.println("::Welcome to add Available Appoinment option Menu"); // Impresion de titulo.
+         System.out.println("::Please , Select a Month");// impresion de instrucciones
+         //...
          for (int i = 0; i < 12; i++) { // recorre 12 poscisiones que corresponden a los 12 meses del año.
              int j = i + 1; // aumenta la numeracion en +1 , corresponde al indice que se imprime por pantalla. (NO puede empezar en cero.)
-             System.out.println("    " + j + "." + MONTHS[i]); // Imprime los dos meses.
+             System.out.println("    >" + j + "." + MONTHS[i]); // Imprime los dos meses.
          }
-         System.out.println("0. Return"); // Opcion para retornar al menu.
-
+         System.out.println(">0. Return"); // Opcion para retornar al menu.
+         //..
          Scanner sc = new Scanner(System.in); // Clase Scanner.
          response = Integer.valueOf(sc.nextLine()); //Variable que recibe la respuesta.
-
+         //...
          if (response > 0 && response < 13) { // Si response es entre 1 y 12 ...Entra al bucle.
              int monthSelected = response; //Asigno la respuesta en una variable cuyo nombre sea mas entendible.
-             System.out.println("::You have chosen the following Option ::" + monthSelected + "." + MONTHS[monthSelected - 1]); // Imprime el mes seleccionado.
-             do { // Inicio de "Do - while" de confirmation Month
-                 System.out.println("   1.- I screwed up , I want to Choose another Month.");
-                 System.out.println("   2.- Yes , That is it ,So I want to Insert an Available date to receipt Patients");
-                 response = Integer.valueOf(sc.nextLine());
-                 switch (response){ // Inicio de "Switch" de confirmation Month
-                     case 1 : // Opcion para volver al Menu de Meses.
-                         System.out.println("::Selection Month Message : !Ok¡ , No Problem , Lest Go To the month selection menu!!");
-                         selectionDate = true;
-                        break;
-                     case 2: // Opcion para pasar a la confirmacion de fecha.
-                         System.out.println("::Selection Month Message : You have confirmated the Month , so....");
-                         do{ // Inicio de "Do-While" de Confirmation Date
-                             System.out.println("::Insertion Month Message : Please , Insert the date available to " + " Example --> [dd/mm/yyyy]"); //insertar fechas disponibles para mostrar a los pacientes.
-                             String dateStringCatch = sc.nextLine(); // captura el String ingresado por terminal.
-                             /* el usuario debe definir si los datos ingresados son correctos o incorrectos.*/
-                             System.out.println("    You haven chosen the following date : " + dateStringCatch + "\n  1. Correct \n  2. Change Date \n 3. I want to go back to the month selection menu");//imprime un menu para validar la informacion ingresada.
-                             response = Integer.valueOf(sc.nextLine()); // vuelve a capturar la respuesta en la misma variable response.
-                             switch (response){ // Inicio de "Switch" de Confirmation Date
-                                 case 1:
-                                     int responseTime = 0;
-                                     String timeStringCatch = "";
-                                     System.out.println("      Catch iT!! ,So lets move on!!\n");
-                                     do { // Inicio de "Do-while" de Confirmation Time
-                                         System.out.println("::Insert the time available for date " + dateStringCatch + " Format Example -->[16:00]");
-                                         timeStringCatch = sc.nextLine(); //captura el string entrante.
-                                         System.out.println("You have chosen the following time : " + timeStringCatch + "\n1. Correct \n2. Change time \n 3. I want to go back to the month selection menu");
-                                         responseTime = Integer.valueOf(sc.nextLine()); //recibe el sgte integer.
-                                         switch (responseTime) { // Inicio de "Switch" de Confirmation Time
-                                             case 1:
-                                                 doctorLogged.addAvailableAppointment(dateStringCatch, timeStringCatch); //llama a un metodo en clas Doctor el cual agrega a un ArrayList el appointment el cual es una clase interna del mismo Doctor..
-                                                 checkDoctorAvailableApppointments(doctorLogged); // Llama al metodo para agregar dentro de un ArrayList q describa una lista de Doctores q tengan citas disponibles.
-                                                 // el nombre del ArrayList es [doctorsAvailableAppointments].
-                                                 break;
-                                             case 2:
-                                                 System.out.println("    Ok , No Problem , You can change it!!");
-                                                 break;
-                                             case 3:
-                                                 System.out.println("    Ok , No Problem , Lest Go To the month selection menu!!");
-                                                 continue;
-                                             default:
-                                                 System.out.println("\n:: Error , that is not an Correct Option , Try Again\n");
-                                                 responseTime = 2;
-                                                 break;
-                                         } // Fin de "Switch" de Confirmation Time
-                                     }while (responseTime == 2); // fin de "Do - while" de confirmation Time
-                                 break;
-                                 case 2:
-                                     System.out.println("    Ok , No Problem , You can change it!!");
-                                     response = 0; //
-                                     break;
-                                 case 3 :
-                                     System.out.println("::Insertion Month Message : !Ok¡ , No Problem , Lest Go To the month selection menu!!");
-                                     response = 2;
-                                     break;
-                                 default:
-                                     break;
-                             }// Fin de "Switch" de Confirmation Date
-                         }while(response != 2); //fin de "Do-while" de Confirmation Date
-                         if ()
-                         continue;
-                     default:
-                     System.out.println("\n::Selection Month Message : Error , that is not an Correct Option , Try Again\n");
-                     response = 0;
-                     break;
-                 }// Fin de "Switch" de confirmation Month
-             }while(response != 1); // Fin de "Do - while" de confirmation Month
+             do {// Inicio de "Do-While" de Insertion Date
+                 insertionDate = false;
+                 System.out.println(text[0] + monthSelected + "." + MONTHS[monthSelected - 1]); // Imprime el mes seleccionado.
+                 System.out.println("::You have confirmated the Month , so...We are going to Insert a date now.");
+                 System.out.println("::Please , Insert the date available to " + MONTHS[monthSelected - 1] + " Example --> [dd/mm/yyyy]"); //insertar fechas disponibles para mostrar a los pacientes.
+                 String dateStringCatch = sc.nextLine(); // captura el String ingresado por terminal.
+                 do { // Inicio de "Do-While" de Confirmation Date
+                     /* el usuario debe definir si los datos ingresados son correctos o incorrectos.*/
+                     confirmationDate = false;
+                     System.out.println(text[0] + " date : " + dateStringCatch + text[1]);//imprime un menu para validar la informacion ingresada.
+                     response = Integer.valueOf(sc.nextLine()); // vuelve a capturar la respuesta en la misma variable response.
+                     switch (response) { // Inicio de "Switch" de Confirmation Date
+                         case 1:
+                             int responseTime = 0;
+                             String timeStringCatch = "";
+                             System.out.println(text[3]); //"      I got you!!,Selection confirmed, So lets move on!!\n"
+                             do { // Inicio de "Do-while" de Insertion Time
+                                 insertionTime = false;
+                                 System.out.println("::Insert the time available to the following date : " + dateStringCatch + " Format Example -->[16:00]");
+                                 timeStringCatch = sc.nextLine(); //captura el string entrante.
+                                 do { // Inicio de "Do-while" de Confirmation Time
+                                     confirmationTime = false;
+                                     System.out.println(text[0] + " time : " + timeStringCatch + text[1] + "\n  4.- I want to Choose Another date.");
+                                     responseTime = Integer.valueOf(sc.nextLine()); //recibe el sgte integer.
+                                     switch (responseTime) { // Inicio de "Switch" de Confirmation Time
+                                         case 1:
+                                             System.out.println(text[3]); //"      I got you!!,Selection confirmed, So lets move on!!\n"
+                                             doctorLogged.addAvailableAppointment(dateStringCatch, timeStringCatch); //llama a un metodo en clas Doctor el cual agrega a un ArrayList el appointment el cual es una clase interna del mismo Doctor..
+                                             checkDoctorAvailableApppointments(doctorLogged); // Llama al metodo para agregar dentro de un ArrayList q describa una lista de Doctores q tengan citas disponibles.
+                                             // el nombre del ArrayList es [doctorsAvailableAppointments].
+                                             System.out.println("::Appointment Doctor Date available Registered");
+                                             do {
+                                                 System.out.println("::Do you want add another Date Month or finished Menu an back to Doctor Menu?¿");
+                                                 System.out.println("\n >1.- Add another time\n >2.- Add another Date\n >3.- Choose another Month\n >4.- Back to Doctor Menu");
+                                                 response = Integer.valueOf(sc.nextLine());
+                                                 switch (response) { // Inicio Switch
+                                                     case 1:
+                                                         confirmationTime = true;
+                                                         break;
+                                                     case 2:
+                                                         confirmationTime = true;
+                                                         insertionTime = true;
+                                                         confirmationDate = true;
+                                                         break;
+                                                     case 3:
+                                                         confirmationTime = true;
+                                                         insertionTime = true;
+                                                         confirmationDate = true;
+                                                         insertionDate = true;
+                                                         break;
+                                                     case 4:
+                                                         confirmationTime = true;
+                                                         insertionTime = true;
+                                                         confirmationDate = true;
+                                                         insertionDate = true;
+                                                         selectionMonth = true;
+                                                         break;
+                                                     default:
+                                                         System.out.println(text[6]);
+                                                         break;
+                                                 }//final switch
+                                             }while (response > 5 );
+                                             break;
+                                         case 2:
+                                             System.out.println(text[4]);
+                                             confirmationTime = true; // repetir
+                                             break;
+                                         case 3:
+                                             System.out.println(text[5]);
+                                          confirmationTime = true;
+                                          insertionTime = true ;
+                                          confirmationDate = true;
+                                          insertionDate = true;
+                                             break;
+                                         case 4:
+                                             System.out.println(text[4]);
+                                             confirmationTime = true;
+                                             insertionTime = true ;
+                                             confirmationDate = true;
+                                             break;
+                                         default:
+                                             System.out.println(text[6]);
+                                             confirmationTime = false;
+                                             break;
+                                     } // Fin de "Switch" de Confirmation Time
+                                 } while (!confirmationTime); // fin de "Do - while" de confirmation Time
+                             }while (!insertionTime);// Fin de "Do-while" de Insertion Time
+                             break;
+                         case 2:
+                             System.out.println(text[4]);
+                             confirmationDate = true;
+                             break;
+                         case 3:
+                             System.out.println(text[5]);
+                             confirmationDate = true;
+                             insertionDate = true;
+                             break;
+                         default:
+                             System.out.println(text[6]);
+                             confirmationDate = false;
+                             break;
+                     }// Fin de "Switch" de Confirmation Date
+                 } while (!confirmationDate); //fin de "Do-while" de Confirmation Date.
+             }while(!insertionDate); //fin de "Do-while" de Insertion Date.
          }else if(response == 0) { // Si se Elijo Return.
-             System.out.println("::Backing to the Doctor Menu");
+             System.out.println(text[2]);
+             selectionMonth = true ;
          } else {
-             System.out.println("\n:: Error , that is not an Correct Option , Try Again\n");
+             System.out.println(text[6]);
+             selectionMonth = true;
          }
-
-     }while (response != 0); // Fin "Do - while" de Selection Month.
+     }while (!selectionMonth); // Fin "Do - while" de Selection Month.
      showDoctorMenu(); //Vuelve a llamar el menu de Doctores.
 }
  private static void checkDoctorAvailableApppointments(Doctor doctor){
         if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)){ //Si el Doctor si tiene citas y si no existe en el arreglo doctorsAvailableAppointments
             doctorsAvailableAppointments.add(doctor); //agregar ese doctor.
         }
+
+ }
+ private void printConfirmationDateTime(boolean date , boolean time , int response){
+        /* date = true , Tomara encuenta los textos para date.
+        *  date = false ,No Tomara encuenta los textos para date.
+        *time = true , Tomara encuenta los textos para time.
+        * time = false , No Tomara encuenta los textos para time.
+        *  */
+
+
+
+     if (date == true && time == false) {
+
+
+     }
+
 
  }
 
