@@ -17,15 +17,14 @@ public class UiPatientMenu {
        int response = 0;
        do {// imprime el menu Patient.
            System.out.println("\n\n");
-           System.out.println("Patient");
-           System.out.println("Welcome: " + patientLogged.getName()); //toma el valor del patient logeado definido desde la clase uiMenu
-           System.out.println("1. Book an appointment"); //libros de citas definidas por los doctores
-           System.out.println("2. My Appointments");//citas disponibles del usuario.
-           System.out.println("0. Logout");
-
+           System.out.println("Welcome Mr/Ms.: " + patientLogged.getName()  + " Please,Choose one of the following options."); //toma el valor del patient logeado definido desde la clase uiMenu
+           System.out.println(">1.Show Book an appointment Doctor Available"); //libros de citas definidas por los doctores
+           System.out.println(">2.Show My Appointments");//citas disponibles del usuario.
+           System.out.println(">0.Logout");
+           //..
            Scanner sc = new Scanner(System.in);
            response = Integer.valueOf(sc.nextLine());
-
+           //..
            switch (response){ // respuesta de menu Patient.
                case 1:
                    showBookAppointMenu();
@@ -34,20 +33,32 @@ public class UiPatientMenu {
                    showPatientMyAppointments();
                    break;
                case 0:
-                   showMenu();
+                   do { //Bucle para Opciones de Logout
+                       System.out.println("::¿Are you sure that do you want to logout?");
+                       System.out.println("\n>1.-Yes \n>2.-No");
+                       response = Integer.valueOf(sc.nextLine());
+                       System.out.println("\n");
+                       if (response == 1) { //SI la Respuesta es SI deseo salir
+                           System.out.println("\n ::Thank you For your Visit,Mr/Ms.: " + patientLogged.getName() + ",See you later \n\n");
+                           showMenu(); // llama al metodo showMenu() de la clase UiMenu.
+                       } else if (response == 2) { //Si es NO , Sale del Bucle Y vuelve al anterior Bucle de Menu Doctor
+                           System.out.println("::¡¡I Got iT!!\n\n");
+                       } else {
+                           System.out.println("::Error,That is not an Available Option,Try Again");
+                       }
+                   }while (response != 2) ; // Mientras sea diferente de 2 , repite.
+                   break;
+               default:
+                   System.out.println("::Error,That is not an Available Option,Try Again");
                    break;
            }
-
-
        }while(response != 0);
-
-
    }
 private static void showBookAppointMenu(){ // metodo que muestra libros de citas definidas por los doctores , las disponibles.
        int response = 0;
        do {
-           System.out.println(":: Book an appointment");
-           System.out.println(":: Select date: ");
+           System.out.println("::Book an appointment");
+           System.out.println("::Select date: ");
            //primer key numeracion de lista de fechas en el primer Integer
            //
            // el segundo key Indice sera la fechas
@@ -58,13 +69,13 @@ private static void showBookAppointMenu(){ // metodo que muestra libros de citas
                 //2.- fecha2
            //2.- doctors2
            //3.- doctors3
-           Map<Integer,Map<Integer, Doctor>> doctors = new TreeMap<>();
+           Map<Integer,Map<Integer, Doctor>> doctors = new TreeMap<>(); // crea un Map del tipo Treemap con una Key que desencadena otro TreeMap Anidado.
            int k = 0; //Captura los primeros numeros de indice , la idea es que pueda perdurar en ambos For dando un Scope mas alto.
-           for (int i = 0; i < doctorsAvailableAppointments.size() ; i++) {
-               ArrayList<Doctor.availableAppointment> availableAppointments = doctorsAvailableAppointments.get(i).getAvailableAppointments();
-               Map<Integer,Doctor> doctorAppointments = new TreeMap<>();
-               for (int j = 0; j < availableAppointments.size() ; j++) {
-                   System.out.println(k + "." + availableAppointments.get(j).getDate());
+           for (int i = 0; i < doctorsAvailableAppointments.size() ; i++) { // Mientras i Sea menor al numero de elementos contenidos en "doctorsAvailableAppointments", Produce Una iteracion.
+               ArrayList<Doctor.availableAppointment> availableAppointments = doctorsAvailableAppointments.get(i).getAvailableAppointments();//En cada Iteracion se crea y obtiene el ArrayList "availableAppointments" de un doctor en particular en la presente clase.
+               Map<Integer,Doctor> doctorAppointments = new TreeMap<>(); // Se crea un TreeMap con el nombre "doctorAppointments".
+               for (int j = 0; j < availableAppointments.size() ; j++) { // For dedicado a iterar el ArrayList "availableAppointments" del doctor especificado en la presente iteracion por parte de "i".
+                   System.out.println(++k + "." + availableAppointments.get(j).getDate());
                    doctorAppointments.put(Integer.valueOf(j), doctorsAvailableAppointments.get(i));
                    doctors.put(k, doctorAppointments);
                }

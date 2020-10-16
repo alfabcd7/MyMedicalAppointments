@@ -73,10 +73,10 @@ public class Doctor extends User { //hereda de "user".
         }
            //SobreCargar Getters.
                 // "GetDate" :
-                    public Date getDate() {
+                    public Date getDate(String DATE) {
                     return date;
                     }
-                    public String getDate(String DATE) { // el parametro de este metodo simplemente servira como "bandera" , para identificar q es un getdate que devuelve un String.
+                    public String getDate() { // el parametro de este metodo simplemente servira como "bandera" , para identificar q es un getdate que devuelve un String.
                     return format.format(date);
                     }
         //Setters.
