@@ -71,11 +71,11 @@ private static void showBookAppointMenu(){ // metodo que muestra libros de citas
            //3.- doctors3
            Map<Integer,Map<Integer, Doctor>> doctors = new TreeMap<>(); // crea un Map del tipo Treemap con una Key que desencadena otro TreeMap Anidado.
            int k = 0; //Captura los primeros numeros de indice , la idea es que pueda perdurar en ambos For dando un Scope mas alto.
-           for (int i = 0; i < doctorsAvailableAppointments.size() ; i++) { // Mientras i Sea menor al numero de elementos contenidos en "doctorsAvailableAppointments", Produce Una iteracion.
+           for (int i = 0; i <= doctorsAvailableAppointments.size() ; i++) { // Mientras i Sea menor al numero de elementos contenidos en "doctorsAvailableAppointments", Produce Una iteracion.
                ArrayList<Doctor.availableAppointment> availableAppointments = doctorsAvailableAppointments.get(i).getAvailableAppointments();//En cada Iteracion se crea y obtiene el ArrayList "availableAppointments" de un doctor en particular en la presente clase.
                Map<Integer,Doctor> doctorAppointments = new TreeMap<>(); // Se crea un TreeMap con el nombre "doctorAppointments".
                for (int j = 0; j < availableAppointments.size() ; j++) { // For dedicado a iterar el ArrayList "availableAppointments" del doctor especificado en la aun presente iteracion por parte de "i".
-                   System.out.println(">"+ ++k + "." + availableAppointments.get(j).getDate());//Imprime por terminal una lista de fechas disponibles en orden el cual fueron agregadas las citas.
+                   System.out.println(">"+ ++k + ".-" + availableAppointments.get(j).getDate());//Imprime por terminal una lista de fechas disponibles en orden el cual fueron agregadas las citas.
                    doctorAppointments.put(Integer.valueOf(j), doctorsAvailableAppointments.get(i));//Ingresa en el treemap "doctorAppoinments" en primer la clave con el valor de "j" y el doctor seleccionado por la iteracion "i" como su correspondiente valor a dicha clave.
                    doctors.put(k, doctorAppointments);//Ingresa en el treemap "doctors" en primer la clave con el valor de "k" y como valor el treemap "doctorAppoinments"
                }
